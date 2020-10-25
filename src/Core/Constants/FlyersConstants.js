@@ -1,0 +1,5 @@
+// FLYERS
+/** ACTIONS **/
+export const GET_FLAYERS = "GET_FLAYERS";
+export const STORED_FLAYERS = "STORED_FLAYERS";
+export const ADD_FAVORITE = "ADD_FAVOURITE";
