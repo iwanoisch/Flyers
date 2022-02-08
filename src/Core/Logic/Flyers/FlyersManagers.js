@@ -63,7 +63,7 @@ const StoredFlyersManager = createLogic({
   }
 });
 
-const addFavouriteManager = createLogic({
+const AddFavouriteManager = createLogic({
   type: [ADD_FAVORITE],
   transform({getState, action}, next) {
     const {flyers = {}} = getState().flyersReducer
@@ -250,7 +250,7 @@ const FavouriteToggleManager = createLogic({
 export const FlyersManagers = [
   GetFlayersManager,
   StoredFlyersManager,
-  addFavouriteManager,
+  AddFavouriteManager,
   GetRetailersManager,
   StoredRetailersManager,
   GetCategoriesManager,
