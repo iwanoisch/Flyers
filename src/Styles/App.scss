@@ -1,0 +1,196 @@
+.ui{
+
+    &.menu{
+
+        &.fixed {
+
+            background: rgb(88, 34, 229)
+
+        }
+
+    }
+
+    &.inverted{
+
+        &.menu .item:before {
+
+            background: rgb(88, 34, 229)
+
+        }
+
+    }
+
+    &.labeled{
+
+        &.icon.menu .item > .icon:not(.dropdown) {
+
+            margin: 0 30px 0px 0px !important;
+
+        }
+
+        &.icon.menu .item {
+
+            border-radius: 5px !important;
+
+        }
+
+    }
+
+    &.cards > .card > .extra, &.card > .extra {
+
+        margin-top: 0px;
+
+        border: none !important;
+
+    }
+
+    &.card {
+
+        height: 100%;
+
+        .retailer {
+
+            text-transform: uppercase;
+
+            color: black !important;
+
+            margin-top: 30px;
+
+            font-size: 15px !important;
+
+        }
+
+        .title {
+
+            margin: 5px 10px 0px 0px !important;
+
+            color: rgb(43, 43, 43) !important;
+
+            font-size: 20px !important;
+
+        }
+
+        .category {
+
+            font-size: 15px !important;
+
+        }
+
+        .alignLeftText {
+
+            text-align: left;
+
+        }
+
+    }
+
+}
+
+.sidebarMenu {
+    background: white !important;
+}
+
+.sidebar-top {
+    height: unset !important;
+    box-shadow:none !important;
+}
+
+.card-padding {
+    padding: 30px 20px 10px !important;
+}
+
+.sidebarItem {
+    color: rgb(117, 117, 117) !important;
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+    .ui.grid.container {
+        width: calc(933px + 2rem) !important;
+    }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .ui.grid.container {
+        color: green;
+        width: calc(933px + 2rem) !important;
+    }
+
+    .ui[class*="four column"].grid > .row > .column, .ui[class*="four column"].grid > .column:not(.row) {
+        width: 25% !important;
+    }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .ui[class*="four column"].doubling.grid > .row > .column, .ui[class*="four column"].doubling.grid > .column:not(.row), .ui.grid > [class*="four column"].doubling.row.row > .column {
+        width: 25% !important;
+    }
+}
+
+.listItem {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.listTitle {
+    font-size: 20px !important;
+    line-height: 1 !important;
+    font-weight: 500 !important;
+}
+
+.itemListContent {
+    padding: 11px !important;
+}
+
+
+.itemListHover:hover {
+    border-radius: 5px !important;
+    /*color icon background: rgb(52,28,212);*/
+    color: rgb(127, 77, 232) !important;
+    background: rgb(239 235 251) !important;
+}
+.itemLIstBorder {
+    borderRadius: '5px !important'
+}
+
+
+.card-component {
+    display: flex !important;
+    flex-direction: row !important;;
+    flex-wrap: wrap !important;;
+    width: 100% !important;;
+}
+
+.card-component-container {
+    display: flex !important;;
+    flex-direction: column !important;;
+    width: 100% !important;;
+}
+
+.card-component-content {
+    display: flex;
+    flex-direction: row;
+    width: 33.33%;
+}
+
+.input-search {
+    margin: 0px 0px 30px;
+    display: flex !important;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.notfound {
+    padding: 30px;
+    min-height: 400px
+}
+
+.flyer_card {
+    margin-bottom: 30px !important;
+}
+.clear-button {
+    margin: 0 10px;
+}

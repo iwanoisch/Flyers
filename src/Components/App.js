@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/App.css';
+import '../Styles/App.scss';
 import NavBarContainer from "../Containers/NavBarContainer";
 
 function App() {

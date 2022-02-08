@@ -1,14 +1,15 @@
 import React from "react";
 import {createSelector} from "reselect";
 import {connect} from "react-redux";
-import {getFlayers} from "../Core/Actions/FlyersActions";
+
 import NavBarComponent from "../Components/NavBarComponent";
+import {favouriteToggle} from "../Core/Actions/FlyersActions";
 
 
 class Navbar extends React.PureComponent {
 
   componentDidMount() {
-    this.props.getFlayers();
+    //this.props.getFlayers();
   }
 
 
@@ -32,7 +33,9 @@ const mapStateToProps = createSelector(
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getFlayers: () => dispatch(getFlayers()),
+    favouriteToggle: (favToggle) => {
+      dispatch(favouriteToggle(favToggle))
+    }
   };
 };
 

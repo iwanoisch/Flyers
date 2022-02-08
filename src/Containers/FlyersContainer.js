@@ -1,7 +1,7 @@
 import React from "react";
 import {createSelector} from "reselect";
 import {connect} from "react-redux";
-import {addFavourite, getFlayers} from "../Core/Actions/FlyersActions";
+import {addFavourite, clearBtnToggle, doFilter, doSearch, getFlayers} from "../Core/Actions/FlyersActions";
 import FlyersComponent from "../Components/FlyersComponent";
 
 
@@ -17,23 +17,38 @@ class Flyers extends React.PureComponent {
   }
 }
 
-const getFlayersReducer = (state) => state.flyersReducer.flyers;
+const getFlayersReducer = (state) => state.flyersReducer;
 
 const mapStateToProps = createSelector(
-  [getFlayersReducer],
-  (flyers) => {
+    [getFlayersReducer],
+    (getFlayersReducer = {}) => {
 
-
-    return {
-      flyers: flyers
-    };
-  }
+      return {
+        flyerList: getFlayersReducer.flyerList,
+        retailers: Object.values(getFlayersReducer.retailers),
+        dropdownValue: getFlayersReducer.dropdownValue,
+        inputValue: getFlayersReducer.inputValue,
+      };
+    }
 );
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getFlayers: () => dispatch(getFlayers()),
-    addFavorite: (flyerId) => dispatch(addFavourite(flyerId))
+    getFlayers: () => {
+      dispatch(getFlayers())
+    },
+    addFavorite: (flyerId) => {
+      dispatch(addFavourite(flyerId))
+    },
+    doSearch: (searchItem) => {
+      dispatch(doSearch(searchItem))
+    },
+    filteredBy: (filterBy) => {
+      dispatch(doFilter(filterBy))
+    },
+    clearBtnToggle: () => {
+      dispatch(clearBtnToggle())
+    }
   };
 };
 
